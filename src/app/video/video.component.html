@@ -1,0 +1,34 @@
+<div class="video_box">
+  <div class="container">
+    <div class="row">
+      <div class="col_lg_6 col_sm_24">
+        <div class="col_box">
+          <div class="submenu_wrap">
+            <h2>Videos <span></span></h2>
+            <ul class="submenu_wrap_ul"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="col_lg_18 col_sm_24">
+        <div class="col_box">
+          <h1 class="video_bt">Videos</h1>
+          <div class="videoListBox">
+            <div *ngFor="let vid of videos" class="list">
+              <div class="video">
+                <a href="{{ vid.url }}"> <img src="{{ vid.img }}" alt="" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="page_box">
+            <div class="page"></div>
+            <div class="m_page">
+              <a href="javascript:void(0);" class="prev">Previous</a>
+              <a href="javascript:void(0);" class="num">1/1</a>
+              <a href="javascript:void(0);" class="next">Next</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

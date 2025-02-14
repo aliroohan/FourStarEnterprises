@@ -1,0 +1,96 @@
+<div class="banner">
+  <div class="banner_bg">
+    <img
+      (click)="data()"
+      src="https://fujacn.usa18.wondercdn.com/uploads/image/6511b35aeece3.jpg"
+      alt="Machines"
+    />
+  </div>
+  <div class="bnner_content product_banner_content">
+    <div class="bnner_content_txt">
+      <h4>Professional & High<br />Quality Embroidery Machine</h4>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="product_hot_box"></div>
+  <div class="crumbs_box black">
+    <div class="contentWH">
+      <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+        <i
+          ><img
+            src="https://fujacn.usa18.wondercdn.com/public/static/images/home/en-us/cur_ico1.png"
+        /></i>
+        <li
+          itemprop="itemListElement"
+          itemscope=""
+          itemtype="https://schema.org/ListItem"
+        >
+          <a itemprop="item" href="/"><span itemprop="name">Home</span></a
+          ><meta itemprop="position" content="1" />
+        </li>
+        <i>»</i>
+        <li
+          itemprop="itemListElement"
+          itemscope=""
+          itemtype="https://schema.org/ListItem"
+        >
+        <li
+          itemprop="itemListElement"
+          itemscope=""
+          itemtype="https://schema.org/ListItem"
+        >
+          <a
+            itemscope
+            itemtype="https://schema.org/WebPage"
+            itemprop="item"
+            itemid="/products-category/single-head-embroidery-machine"
+            href="/machine/{{type}}/{{subType}}"
+            [routerLink] = "['/machine', type, subType]"
+            class="on"
+            ><span itemprop="name">{{pageTitle}}</span></a
+          ><meta itemprop="position" content="3" />
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="product_content_box">
+    <div class="contentWH">
+      <div class="product_content_title">
+        <h1>{{ pageTitle }}</h1>
+      </div>
+      <ul class="product_content_ul">
+        <li *ngFor="let data of showData" class="wow slideInUp new_products">
+          <div class="product_content_ul_img">
+            <a href="{{ data.Link }}">
+              <img
+                src="{{ data.Image }}"
+                alt="Single Head 10 Needles Embroidery Machine with 240*360MM"
+              />
+            </a>
+          </div>
+          <h4>
+            <a href="{{ data.Link }}">{{ data.Name }}</a>
+          </h4>
+          <a
+            href="{{ data.Link }}"
+            pro_id="28"
+            data-img="https://fujacn.usa18.wondercdn.com/uploads/image/676127a4e827f.jpg"
+            class="inquire"
+            title="Inquire"
+            ><img
+              src="https://fujacn.usa18.wondercdn.com/public/static/images/home/en-us/product_email_ico.png"
+            />
+            Inquiry</a
+          >
+        </li>
+      </ul>
+      <div class="pagination">
+        <button class="pagination-button" (click)="prevPage()" [disabled]="currentPage === 1">Back</button>
+        <span class="pagination-info">Page {{ currentPage }} of {{ numPages }}</span>
+        <button class="pagination-button" (click)="nextPage()" [disabled]="currentPage === numPages">Next</button>
+      </div>
+    </div>
+  </div>
+</div>

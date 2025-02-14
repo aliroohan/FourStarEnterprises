@@ -1,0 +1,66 @@
+<div class="header">
+  <div class="header_bottom">
+    <div class="contentWH">
+      <div class="header_bottom_content">
+        <div class="header_bottom_content_left">
+          <a href="/">
+            <img
+              src="/assets/FOUR STAR ENTERPRISES.png"
+              height="50%"
+              alt="Shenzhen Fuja Machinery Co., Ltd."
+            />
+          </a>
+        </div>
+        <ul class="nav_box">
+          <li class="on" id="home">
+            <a [routerLink]="['/']" class="nav_link_first">Home</a>
+          </li>
+          <li id="machine" [ngClass]="isMachine? 'on': '' ">
+            <a href="javascript:void(0);" class="nav_link_first" (click)="toggleSubmenu($event)">Machines</a>
+            <div class="nav_list_box">
+              <a
+                href="#"
+                *ngFor="let m of machines.basic"
+                [routerLink]="['/machine', 'basic', m.url]"
+                >{{ m.name }}</a
+              >
+              <div class="nested-dropdown">
+                <a href="javascript:void(0);" class="parent-link" (click)="toggleSubmenu($event)">Multi Head Embroidery Machines</a>
+                <div class="nested-content">
+                  <a
+                    href="#"
+                    [routerLink]="['/machine', 'multihead', m.url]"
+                    *ngFor="let m of machines.multihead"
+                    >{{ m.name }}</a
+                  >
+                </div>
+              </div>
+              <div class="nested-dropdown">
+                <a href="javascript:void(0);" class="parent-link" (click)="toggleSubmenu($event)">More Products</a>
+                <div class="nested-content">
+                  <a
+                    href="#"
+                    [routerLink]="['/machine', 'more', m.url]"
+                    *ngFor="let m of machines.moreProducts"
+                    >{{ m.name }}</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+          <li [ngClass]="isVideos ?  'on': '' " id="videos">
+            <a [routerLink]="['/videos']" class="nav_link_first">Videos</a>
+          </li>
+          <li [ngClass]="isContact ?  'on': '' " id="contact">
+            <a [routerLink]="['/contact']" class="nav_link_first">Contact Us</a>
+          </li>
+        </ul>
+        <div (click)="showMenu()" class="hd_btn">
+          <span class="s1"></span>
+          <span class="s2"></span>
+          <span class="s3"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

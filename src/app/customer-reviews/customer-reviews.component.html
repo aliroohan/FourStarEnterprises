@@ -1,0 +1,27 @@
+<div class="index_customer_box">
+  <div class="contentWH">
+    <div class="index_customer_title wow slideInLeft">
+      <h4>Customer Reviews</h4>
+      <p>Contact Us To Find Your Suitable Machine</p>
+      <a href="javascript:;" class="email_click"
+        >Submit Message
+        <img
+          src="/assets/play.png"
+      /></a>
+    </div>
+    <ul class="index_customer_ul">
+      <li *ngFor="let review of reviews" class="wow slideInUp">
+        <h4>{{ review.title }}</h4>
+        <h5>{{ review.author }}</h5>
+        <span>{{ review.date }}</span>
+        <img
+          src="https://fujacn.usa18.wondercdn.com/public/static/images/home/en-us/index_customer_ico.png"
+        />
+        <p>{{ review.content }}</p>
+        <a class="index_customer_ul_click" href="javascript:;">
+          <strong>Learn more</strong>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

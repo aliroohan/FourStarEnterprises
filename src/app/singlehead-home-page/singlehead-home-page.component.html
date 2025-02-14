@@ -1,0 +1,95 @@
+<div class="index_product_box">
+  <div class="index_product_list">
+    <div class="contentWH">
+      <div class="index_product_list_content">
+        <div class="index_product_list_content_left wow slideInLeft">
+          <h4>Single Head Embroidery Machine</h4>
+          <p>
+            Smart Single Head Embroidery Machine with multi colors is suitable
+            for embroidery beginner to start business easily. Lower power
+            consumption and user-friendly display to make your embroidery
+            business win at the starting line.
+          </p>
+        </div>
+        <div class="index_product_list_content_right wow slideInRight">
+          <div
+            (click)="onNext()"
+            class="swiper-button-next index_product_list_content_right_sw_right index_product_list_content_right_sw_right1"
+          >
+            >
+          </div>
+          <div
+            class="swiper-button-prev index_product_list_content_right_sw_left index_product_list_content_right_sw_left1"
+            (click)="onPrev()"
+          >
+            <
+          </div>
+          <div
+            class="swiper-container index_product_list_content_right_sw index_product_list_content_right_sw1"
+          >
+            <div class="swiper-wrapper" id="wrap">
+              <div *ngFor="let machine of csvData" class="swiper-slide">
+                <a href="{{ machine.Link }}">
+                  <div class="index_product_list_content_right_sw_bg">
+                    <img
+                      src="{{ machine.Image }}"
+                      alt="Single Head 10 Needles Embroidery Machine with 240*360MM"
+                    />
+                  </div>
+                  <h4>{{ machine.Name }}</h4>
+                  <span>Learn more</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="index_product_list">
+    <div class="contentWH">
+      <div class="index_product_list_content">
+        <div class="index_product_list_content_left wow slideInRight">
+          <h4>Multi Heads Embroidery Machine</h4>
+          <p>
+            Heavy duty multi heads machine with full servo motors and double
+            beams is born for mass production and suitable for industrial
+            embroidery business.
+          </p>
+        </div>
+        <div class="index_product_list_content_right wow slideInLeft">
+          <div
+            (click)="onNext1()"
+            class="swiper-button-next index_product_list_content_right_sw_right index_product_list_content_right_sw_right2"
+          >
+            >
+          </div>
+          <div
+            (click)="onPrev1()"
+            class="swiper-button-prev index_product_list_content_right_sw_left index_product_list_content_right_sw_left2"
+          >
+            <
+          </div>
+          <div
+            class="swiper-container index_product_list_content_right_sw index_product_list_content_right_sw2"
+          >
+            <div class="swiper-wrapper" id="wrap2">
+              <div *ngFor="let machine of csvData2" class="swiper-slide">
+                <a href="{{ machine.Link }}">
+                  <div class="index_product_list_content_right_sw_bg">
+                    <img
+                      src="{{ machine.Image }}"
+                      alt="Quality two heads embroidery machine with 500*400mm "
+                    />
+                  </div>
+                  <h4>{{ machine.Name }}</h4>
+                  <span>Learn more</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
