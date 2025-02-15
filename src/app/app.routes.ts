@@ -25,6 +25,6 @@ export const routes: Routes = [
   },
   {
     path: 'contact',
-    component: ContactPageComponent
+    component: ContactPageComponent,
   }
 ];
