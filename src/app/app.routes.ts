@@ -4,6 +4,7 @@ import { MachineComponent } from './machine/machine.component';
 import { VideopageComponent } from './videopage/videopage.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { MachineResolver } from './machine.service';
+import { provideClientHydration } from '@angular/platform-browser';
 
 export const routes: Routes = [
   {
@@ -21,6 +22,12 @@ export const routes: Routes = [
     resolve: {
       params: MachineResolver,
     },
+    providers: [
+      {
+        provide: provideClientHydration,
+        useValue: 'client' // This disables prerendering for this route
+      }
+    ]
   },
   {
     path: 'videos',
