@@ -25,7 +25,7 @@ export const routes: Routes = [
     providers: [
       {
         provide: provideClientHydration,
-        useValue: 'client' // This disables prerendering for this route
+        useValue: 'client'
       }
     ]
   },
