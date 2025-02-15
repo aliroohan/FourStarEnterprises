@@ -24,7 +24,7 @@ export const routes: Routes = [
     },
     providers: [
       {
-        provide: provideClientHydration,
+        provide: provideClientHydration(),
         useValue: 'client'
       }
     ]

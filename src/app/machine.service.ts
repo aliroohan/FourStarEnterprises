@@ -9,7 +9,6 @@ export class MachineResolver implements Resolve<any> {
     
     return [
       "/machine/basic/single-head",
-    
     ];
   }
 }
