@@ -2,8 +2,8 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { MachineComponent } from './machine/machine.component';
 import { VideopageComponent } from './videopage/videopage.component';
-import { ContactComponent } from './contact/contact.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { MachineResolver } from './machine.service';
 
 export const routes: Routes = [
   {
@@ -18,6 +18,9 @@ export const routes: Routes = [
   {
     path: 'machine/:type/:subtype',
     component: MachineComponent,
+    resolve: {
+      params: MachineResolver,
+    },
   },
   {
     path: 'videos',
