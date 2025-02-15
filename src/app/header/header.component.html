@@ -21,7 +21,7 @@
               <a
                 href="#"
                 *ngFor="let m of machines.basic"
-                [routerLink]="['/machine', 'basic', m.url]"
+                [routerLink]="['/machines', 'basic', m.url]"
                 >{{ m.name }}</a
               >
               <div class="nested-dropdown">
@@ -29,7 +29,7 @@
                 <div class="nested-content">
                   <a
                     href="#"
-                    [routerLink]="['/machine', 'multihead', m.url]"
+                    [routerLink]="['/machines', 'multihead', m.url]"
                     *ngFor="let m of machines.multihead"
                     >{{ m.name }}</a
                   >
@@ -40,7 +40,7 @@
                 <div class="nested-content">
                   <a
                     href="#"
-                    [routerLink]="['/machine', 'more', m.url]"
+                    [routerLink]="['/machines', 'more', m.url]"
                     *ngFor="let m of machines.moreProducts"
                     >{{ m.name }}</a
                   >
