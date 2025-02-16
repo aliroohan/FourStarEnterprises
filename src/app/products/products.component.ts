@@ -42,6 +42,7 @@ export class ProductsComponent implements OnInit, OnChanges {
       this.loadProductData();
     }
     window.scrollTo(0, 0);
+    this.currentPage = 1;
     console.log(this.csvData);
   }
 
