@@ -645,3 +645,13 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 565px) {
+    .header {
+        height: 80px;
+    }
+
+    .header_bottom_content {
+        padding: 38px 0;
+    }
+}
