@@ -3,7 +3,6 @@ import { HomeComponent } from './home/home.component';
 import { MachineComponent } from './machine/machine.component';
 import { VideopageComponent } from './videopage/videopage.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
-import { MachineResolver } from './machine.service';
 import { provideClientHydration } from '@angular/platform-browser';
 
 export const routes: Routes = [
@@ -19,9 +18,6 @@ export const routes: Routes = [
   {
     path: 'machine/:type/:subtype',
     component: MachineComponent,
-    resolve: {
-      params: MachineResolver,
-    },
     providers: [
       {
         provide: provideClientHydration(),

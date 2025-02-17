@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class MachineResolver implements Resolve<any> {
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    
-    return [
-      "/machine/basic/single-head",
-    ];
+export class Machine {
+  constructor(private http: HttpClient) {}
+
+  loadMachineData(fileUrl: string): Observable<any> {
+
+    return this.http.get(fileUrl, { responseType: 'text' });
   }
 }

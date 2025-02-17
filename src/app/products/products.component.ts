@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import * as Papa from 'papaparse';
 import { Router, ActivatedRoute, NavigationEnd, RouterModule } from '@angular/router';
+import { Machine } from '../machine.service';
 
 @Component({
   selector: 'app-products',
@@ -27,7 +28,7 @@ export class ProductsComponent implements OnInit, OnChanges {
   numPages: number = 0;
   currentPage: number = 1;
   itemsPerPage: number = 15;
-  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) {}
+  constructor(private machine: Machine, private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -104,9 +105,12 @@ export class ProductsComponent implements OnInit, OnChanges {
     }
     
     
-    this.http.get(this.fileUrl, { responseType: 'text' }).subscribe(
-      (data) => this.extractData(data),
-      (error) => console.error('Error loading CSV file', error)
+    this.machine.loadMachineData(this.fileUrl).subscribe(
+      data => {
+        if (data) {
+          this.extractData(data);
+        }
+      }
     );
   }
 
