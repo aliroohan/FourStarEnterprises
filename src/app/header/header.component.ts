@@ -18,9 +18,7 @@ export class HeaderComponent implements OnInit {
   isContact = false;
   currentRoute: string = '/home';
 
-  constructor(private router: Router) {}
-
-  ngOnInit() {
+  constructor(private router: Router) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
@@ -62,6 +60,10 @@ export class HeaderComponent implements OnInit {
 
 
       });
+  }
+
+  ngOnInit() {
+    
   }
 
   machines = {
