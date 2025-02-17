@@ -10,6 +10,10 @@ export class HomepagePicsComponent implements OnInit {
   currentIndex: number = 0; 
 
   ngOnInit() {
+    setInterval(() => {
+      this.currentIndex = (this.currentIndex + 1) % 3;
+      this.updateSlides(); 
+    }, 5000);
   }
 
   currentSlide(index: number) {
