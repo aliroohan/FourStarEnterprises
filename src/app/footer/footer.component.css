@@ -1,3 +1,10 @@
 .footer_last_content {
     justify-content: center;
 }
+
+@media screen and (min-width: 990px) and (max-width: 1100px) {
+    .footer_content_right_left_content {
+        width: 120%;
+    }
+    
+}
