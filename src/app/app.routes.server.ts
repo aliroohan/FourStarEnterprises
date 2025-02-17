@@ -3,7 +3,7 @@ export const serverRoutes: ServerRoute[] = [
   
 
   {
-    path: 'machine/:basic/:single-head',
+    path: 'machine/:type/:subtyoe',
     renderMode: RenderMode.Prerender
   },
   {
