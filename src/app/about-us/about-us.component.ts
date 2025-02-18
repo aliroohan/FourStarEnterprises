@@ -13,11 +13,11 @@ export class AboutUsComponent {
     const play = document.querySelector('.pla img');
     
     if (!this.play) {
-    play?.setAttribute('src', '/assets/pause.png');
+    play?.setAttribute('src', '/assets/pause.svg');
     video?.play();
     this.play = true;
     } else {
-    play?.setAttribute('src', '/assets/play_btn.png');
+    play?.setAttribute('src', '/assets/play-button.svg');
     video?.pause();
     this.play = false;
     }
