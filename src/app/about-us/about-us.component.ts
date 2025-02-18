@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './about-us.component.css'
 })
 export class AboutUsComponent {
-
+  addPlay() {
+    const video = document.querySelector('video');
+    video?.play();
+  }
 }
