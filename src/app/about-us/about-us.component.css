@@ -1,0 +1,14 @@
+.index_about_content_right video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.play_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -33%;
+
+}
