@@ -583,17 +583,25 @@
         opacity: 1;
     }
 
+    .nested-dropdown {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .nested-dropdown.active .nested-content {
         max-height: none !important;
+        position: static !important;
         visibility: visible;
         opacity: 1;
-        padding: 10px 0;
     }
 
     .nested-content {
         max-height: 0 !important;
         visibility: hidden;
         opacity: 0;
+        box-shadow: none !important;
+        margin: 0;
     }
 }
 
