@@ -219,53 +219,6 @@
     margin-left: 8px;
 }
 
-#machine:active::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 3px;
-    background: var(--mainColor);
-    position: absolute;
-    left: 0;
-    bottom: -13px;
-    transition: all 0.6s;
-}
-
-#home:active::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 3px;
-    background: var(--mainColor);
-    position: absolute;
-    left: 0;
-    bottom: -13px;
-    transition: all 0.6s;
-}
-
-#videos:active::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 3px;
-    background: var(--mainColor);
-    position: absolute;
-    left: 0;
-    bottom: -13px;
-    transition: all 0.6s;
-}
-
-#contact:active::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 3px;
-    background: var(--mainColor);
-    position: absolute;
-    left: 0;
-    bottom: -13px;
-    transition: all 0.6s;
-}
 
 .header_right_lange_box {
     width: 86px;
@@ -351,7 +304,7 @@
     }
 
     .nav_box li:hover .nav_list_box {
-        max-height: none !important; /* Override when hovered */
+        max-height: none !important;
         opacity: 1;
         visibility: visible;
     }
@@ -401,7 +354,7 @@
         position: static;
         width: 100%;
         padding: 0;
-        max-height: 0 !important; /* Force initial state */
+        max-height: 0 !important;
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
@@ -410,7 +363,7 @@
     }
 
     .nested-dropdown:hover .nested-content {
-        max-height: none !important; /* Override when hovered */
+        max-height: none !important;
         opacity: 1;
         visibility: visible;
         padding: 10px 0;
@@ -523,7 +476,6 @@
     visibility: visible;
 }
 
-/* Desktop Styles */
 .nested-dropdown {
     position: relative;
     width: 100%;
@@ -566,10 +518,7 @@
     }
 }
 
-/* Mobile Styles */
 @media screen and (max-width: 768px) {
-    /* ...existing mobile styles... */
-
     .nav_list_box {
         max-height: 0 !important;
         visibility: hidden;
@@ -605,7 +554,6 @@
     }
 }
 
-/* Desktop Styles */
 @media screen and (min-width: 769px) {
     .nav_box {
         display: flex !important; /* Force flex display in desktop */
@@ -629,7 +577,6 @@
     }
 }
 
-/* Mobile Styles */
 @media screen and (max-width: 768px) {
     .nav_box {
         flex-direction: column;
